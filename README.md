@@ -25,24 +25,3 @@ tooling
   └─ typescript
       └─ Shared tsconfig base
 ```
-
-## Setup
-
-```bash
-# Install dependencies
-bun install
-
-# Start dev server
-bun dev
-
-# Lint & format
-bun lint
-bun format
-
-# Type check
-bun typecheck
-```
-
-## Deployment
-
-Deployed to Vercel via `turbo run build`. Pushing to `main` triggers a production deployment.

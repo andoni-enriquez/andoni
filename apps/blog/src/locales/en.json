@@ -1,0 +1,26 @@
+{
+  "blog": {
+    "title": "Blog",
+    "description": "Developing a soul — one thought at a time.",
+    "noPostsFound": "No posts found.",
+    "backToBlog": "Back home",
+    "by": "By",
+    "updated": "Updated",
+    "onThisPage": "Content",
+    "postNotFound": "Post Not Found",
+    "minRead": "min read"
+  },
+  "soul": {
+    "writtenWith": "Written with",
+    "version": "v{version}",
+    "readMore": "Read the soul",
+    "backToBlog": "Back home",
+    "notFound": "Soul Not Found",
+    "title": "Soul"
+  },
+  "pagination": {
+    "previous": "Previous",
+    "next": "Next",
+    "pageOf": "Page {current} of {total}"
+  }
+}

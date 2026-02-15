@@ -1,0 +1,18 @@
+{
+  "extends": "@andoni/tsconfig/base.json",
+  "compilerOptions": {
+    "lib": ["ES2022", "dom", "dom.iterable"],
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "~/*": ["./src/*"],
+      "#site/content": ["./.velite"]
+    }
+  },
+  "include": [".", ".next/types/**/*.ts", ".velite"],
+  "exclude": ["node_modules"]
+}

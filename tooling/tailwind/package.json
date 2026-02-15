@@ -1,0 +1,22 @@
+{
+  "name": "@andoni/tailwind-config",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./theme.css"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo node_modules"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "catalog:tailwind",
+    "postcss": "catalog:tailwind",
+    "tailwindcss": "catalog:tailwind"
+  },
+  "devDependencies": {
+    "@andoni/tsconfig": "workspace:*",
+    "typescript": "catalog:"
+  }
+}

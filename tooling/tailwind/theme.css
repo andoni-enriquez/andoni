@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@source "../../apps/*/src/**/*.{ts,tsx}";
+@source "../../packages/ui/src/**/*.{ts,tsx}";
+
+@theme {
+  --color-fg: var(--ds-fg);
+  --color-fg-muted: var(--ds-fg-muted);
+  --color-bg: var(--ds-bg);
+  --color-border: var(--ds-border);
+}
+
+:root {
+  --ds-fg: #131316;
+  --ds-fg-muted: #6e6e77;
+  --ds-bg: #fff;
+  --ds-border: #e2e2e5;
+}
+
+html {
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  color: var(--ds-fg);
+  background: var(--ds-bg);
+}
+
+::selection {
+  background: var(--ds-fg);
+  color: var(--ds-bg);
+}

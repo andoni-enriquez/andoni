@@ -1,0 +1,35 @@
+{
+  "name": "@andoni/blog",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clean": "git clean -xdf .cache .next .turbo node_modules",
+    "typecheck": "velite build && tsc --noEmit",
+    "build": "NODE_NO_WARNINGS=1 next build",
+    "dev": "next dev --turbo",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@andoni/ui": "workspace:*",
+    "next": "catalog:",
+    "next-intl": "^4.8.2",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-pretty-code": "^0.14.1",
+    "rehype-slug": "^6.0.0",
+    "tailwindcss": "catalog:tailwind",
+    "velite": "^0.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "catalog:tailwind",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@andoni/tailwind-config": "workspace:*",
+    "@andoni/tsconfig": "workspace:*",
+    "postcss": "catalog:tailwind",
+    "typescript": "catalog:"
+  }
+}

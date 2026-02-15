@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "git clean -xdf .cache .next .turbo node_modules",
     "typecheck": "velite build && tsc --noEmit",
-    "build": "NODE_NO_WARNINGS=1 next build",
+    "build": "velite build && NODE_NO_WARNINGS=1 next build",
     "dev": "next dev --turbo",
     "start": "next start"
   },

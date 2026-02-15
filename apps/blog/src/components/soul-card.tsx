@@ -4,9 +4,10 @@ import type { Soul } from "~/lib/blog";
 
 type SoulCardProps = {
   soul: Soul;
+  model?: string | undefined;
 };
 
-export function SoulCard({ soul }: SoulCardProps) {
+export function SoulCard({ soul, model }: SoulCardProps) {
   const t = useTranslations("soul");
 
   return (
@@ -15,6 +16,7 @@ export function SoulCard({ soul }: SoulCardProps) {
         {t("writtenWith")}{" "}
         <strong className="font-medium text-fg">{soul.alias}</strong>{" "}
         {t("version", { version: soul.version })}
+        {model && <> · {model}</>}
       </p>
       <p className="mt-2 text-xs text-fg-muted leading-relaxed">{soul.brief}</p>
       {soul.published && (

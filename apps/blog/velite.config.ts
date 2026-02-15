@@ -34,6 +34,7 @@ const posts = defineCollection({
       image: s.string().max(200).optional(),
       published: s.boolean().default(true),
       soul: s.string().max(50).optional(),
+      model: s.string().max(50).optional(),
       authors: s.array(s.string()).default(["andoni"]),
       metadata: s.metadata(),
       toc: s.toc(),

@@ -114,7 +114,9 @@ export default async function PostPage({ params }: PostPageProps) {
       </Link>
 
       <header className="mb-10">
-        <h1 className="mb-3 text-lg font-medium leading-snug">{post.title}</h1>
+        <h1 className="mb-3 text-base font-medium leading-snug">
+          {post.title}
+        </h1>
         <p className="mb-4 text-sm text-fg-muted leading-relaxed">
           {post.description}
         </p>

@@ -41,7 +41,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
 
   return (
     <>
-      <div className="mb-8 flex items-end justify-between border-b border-border">
+      <div className="mb-4 pb-4 flex items-end justify-between border-b border-border">
         <div>
           <h1 className="text-base font-medium">thoughts</h1>
           <p className="text-xs text-fg-muted">by andoni</p>

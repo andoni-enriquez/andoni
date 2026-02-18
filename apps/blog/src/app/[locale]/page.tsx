@@ -41,7 +41,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
 
   return (
     <>
-      <div className="mb-8 flex items-end justify-between">
+      <div className="mb-8 flex items-end justify-between border-b border-border">
         <div>
           <h1 className="text-base font-medium">thoughts</h1>
           <p className="text-xs text-fg-muted">by andoni</p>
@@ -84,12 +84,12 @@ export default async function HomePage({ searchParams }: HomePageProps) {
         </div>
       </div>
 
-      <div className="space-y-0 border-t border-border">
+      <div className="space-y-0">
         {paginatedPosts.length === 0 ? (
           <p className="text-sm text-fg-muted">{t("noPostsFound")}</p>
         ) : (
           paginatedPosts.map((post) => (
-            <article key={post.slug} className="py-4">
+            <article key={post.slug} className="py-3">
               <Link
                 href={`/blog/${post.slugAsParams}`}
                 className="group flex items-baseline justify-between gap-4"

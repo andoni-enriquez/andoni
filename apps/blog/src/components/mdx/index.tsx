@@ -109,7 +109,7 @@ export const mdxComponents: MDXComponents = {
   ),
   mark: ({ children, ...props }) => (
     <mark
-      className="bg-transparent text-fg underline decoration-border decoration-1 underline-offset-4"
+      className="bg-transparent text-sm text-fg underline decoration-border decoration-1 underline-offset-4"
       {...props}
     >
       {children}

@@ -84,12 +84,12 @@ export default async function HomePage({ searchParams }: HomePageProps) {
         </div>
       </div>
 
-      <div className="space-y-0">
+      <div className="space-y-0 border-t border-border">
         {paginatedPosts.length === 0 ? (
           <p className="text-sm text-fg-muted">{t("noPostsFound")}</p>
         ) : (
           paginatedPosts.map((post) => (
-            <article key={post.slug} className="border-t border-border py-4">
+            <article key={post.slug} className="py-4">
               <Link
                 href={`/blog/${post.slugAsParams}`}
                 className="group flex items-baseline justify-between gap-4"

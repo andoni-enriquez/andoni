@@ -155,7 +155,13 @@ export default async function PostPage({ params }: PostPageProps) {
       <div className="flex gap-10">
         <article className="min-w-0 flex-1">
           <MDXContent components={mdxComponents} />
-          {soul && <SoulCard soul={soul} model={post.model} />}
+          {soul && (
+            <SoulCard
+              soul={soul}
+              model={post.model}
+              soulVersion={post.soulVersion}
+            />
+          )}
         </article>
 
         {post.toc && post.toc.length > 0 && (

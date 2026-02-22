@@ -162,6 +162,15 @@ export default async function PostPage({ params }: PostPageProps) {
               soulVersion={post.soulVersion}
             />
           )}
+
+          <footer className="mt-10">
+            <Link
+              href={`/blog/${slug}/md`}
+              className="text-xs text-fg-muted underline underline-offset-4 hover:text-fg"
+            >
+              {t("viewMarkdown")}
+            </Link>
+          </footer>
         </article>
 
         {post.toc && post.toc.length > 0 && (

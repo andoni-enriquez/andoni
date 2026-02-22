@@ -1,0 +1,177 @@
+---
+title: "The Model Is Not the Product"
+date: 2026-02-22
+description: "Foundation models are the engine. Here's why the car takes years to build — and why no lab is coming to build it for you."
+soul: fly
+model: "opus-4.6"
+authors:
+  - andoni
+published: false
+---
+
+I sat across from a well-known entrepreneur at dinner last week. We got into
+the product. He asked good questions. Then he asked the one I wasn't fully
+ready for.
+
+"Why won't one of the big AI labs just build this?"
+
+I gave an answer. It wasn't a bad one. But it wasn't the real one — the one
+I've been working through since I walked out of that restaurant.
+
+This is that answer.
+
+---
+
+## The wrong frame
+
+The question assumes we're building a better chatbot. We're not.
+
+Any frontier model can explain anything. Ask it how to process a refund and
+you'll get a clean, accurate answer. In seconds. For free.
+
+<mark>The problem is not generating the explanation. The problem is verifying
+the employee understood it — and ensuring that understanding persists.</mark>
+
+Those are different problems. Radically different. One is a retrieval problem.
+The other is a systems problem. Confusing them is why most corporate training
+is theater.
+
+---
+
+## What the LMS industry got wrong
+
+LMS measures completion. Did you finish the module? Did you pass the quiz?
+
+These are proxies for learning. Bad ones. You can click through a fire
+extinguisher safety module in four minutes and still not know how to use one.
+<mark>Competence is not completion.</mark>
+
+The real question is: can you do the thing? Under pressure, in a novel
+situation, three months from now? That's what actual training is supposed to
+produce — and almost nothing currently measures it.
+
+Foundation models don't fix this. They make it worse. Now employees can ask
+the AI to pass their compliance quiz for them. The checkbox still gets checked. Nobody
+learned anything.
+
+---
+
+## The knowledge problem
+
+When a new hire joins a company, the relevant knowledge is scattered. PDFs.
+Slack threads. The institutional memory of a senior employee who's leaving
+next quarter. Process docs that haven't been updated since the product changed.
+
+The big labs have none of this. They have general knowledge — which is
+genuinely remarkable. But they don't know your refund policy changed from 45
+days to 30 last March. They don't know your best sales reps handle objections
+differently than the training materials say. They don't know who on your team
+actually understands the compliance requirements versus who clicked the
+checkbox.
+
+<mark>The hard part is not the reasoning. It's the context.</mark>
+
+We're building the brain that holds that context. Not as static content — as a
+living knowledge graph. It updates when your docs update. It flags
+inconsistencies: "this SOP says 45 days, this other document says 30." It
+connects knowledge to the people who need it, at the moment they need it.
+
+A language model reasons over context. We're building the context layer for
+every company that touches us. That's not something any of them ships.
+
+In practice: documents get chunked, embedded at 4096 dimensions, and stored
+in Postgres via pgvector. When the system reasons over your company's
+knowledge, it's running semantic search over that table — not hallucinating
+from pre-training. The inconsistency detection is real — it runs at ingestion
+time, not as a post-hoc check.
+
+---
+
+## The comprehension loop
+
+<mark>The LLM is the engine. We're building the car.</mark>
+
+What makes Duolingo work isn't vocabulary lists. It's the system around the
+vocabulary: spaced repetition, forced recall, immediate feedback, adaptive
+difficulty, streaks that make quitting feel costly. The pedagogy is the
+product.
+
+We're doing the same thing for enterprise knowledge. The learning primitives
+are real: Socratic dialogue that probes the gaps in your model. Feynman tests
+that force you to explain it simply — and reveal when you can't. Roleplay that
+puts you in the scenario before it happens for real. Spaced reinforcement so
+the thing you learned in onboarding is still there six months later.
+
+Any major model can power those interactions. None of them can close the loop — connect the
+comprehension back to the workflow, correlate it with error rates in your CRM,
+flag when re-training is needed because something changed upstream. That loop
+is infrastructure. We're building it.
+
+The generation pipeline runs five specialized agents. Compass analyzes
+documents and produces a structured research brief. Quill writes narration —
+60 to 90 words per scene, aligned to the organization's voice. Prism assigns
+visual layouts. Harmony checks cross-chapter consistency. Sentinel — the
+quality gate — runs deterministic schema validation followed by an LLM audit
+before anything reaches a learner. Each agent has a typed input contract and
+a Zod-validated output. If the model produces output that doesn't conform, it
+fails at the boundary.
+
+---
+
+## The integration moat
+
+Here's the thing about "the big labs will just build this": maybe. Eventually.
+
+But they won't build the CRM hook that fires a micro-learning session before
+your sales rep opens a new account type for the first time. They won't build
+the Slack integration that surfaces the right context at the right moment.
+They won't build the HR system routing that delivers the right training to the
+right person based on role, location, and what they've already completed.
+
+Not because they can't. Because that's not their business. They build
+foundations. We build vertically, on top of them, in one domain, with
+obsessive depth.
+
+<mark>The moat is not the model. The moat is everything the model needs to
+actually work.</mark>
+
+And even if they tried — they'd arrive years behind on the integrations, the
+pedagogical primitives, and the data on what actually produces competence in
+real workplaces. That data compounds with every company we touch. It doesn't
+exist anywhere else.
+
+---
+
+## What we're building
+
+Not a chatbot. Not a video player. Not a better PowerPoint generator.
+
+A system that ingests a company's raw knowledge — PDFs, Notion pages, product
+catalogs, SOPs, anything — and converts it into a living knowledge graph. From
+that graph, it generates adaptive learning: video, dialogue, roleplay, Feynman
+tests. It verifies comprehension, not completion. It updates automatically
+when the source changes. It embeds into the tools people already use, so
+learning comes to the employee instead of the other way around.
+
+The output isn't a blob of content. It's a typed structure: `Project →
+Chapter → Scene → Content → NarrationAlignment`. That schema drives both
+generation and playback. The same data the agents produce is what the player
+renders — word boundaries mapped to audio timestamps, layouts resolved at
+generation time, not at render time. No translation layer.
+
+The goal: no one on your team should ever wonder whether they know what they
+need to know. The system ensures it.
+
+<mark>Duolingo didn't build a better dictionary. They built the most effective
+language learning system in history by going obsessively deep on the
+pedagogy.</mark>
+
+We're doing that for enterprise. Same model, different domain.
+
+---
+
+The big labs won't replace us for the same reason Google didn't replace Salesforce.
+The model is not the product. The system built around it is. And systems take
+years to build, integrate, and earn trust.
+
+We're building the system.

@@ -45,7 +45,7 @@ published: false
 **Body guidelines — follow the mosca voice:**
 
 - Direct, understated, technically precise. Short sentences. Em dashes over parentheses.
-- Use `<mark>` tags on key statements — the sentences that carry the argument forward. Use sparingly (see `apps/blog/content/blog/en/inception.mdx` for reference).
+- Use `<mark>` tags on supporting beats — pivots, reversals, structural statements that carry the argument forward. Never highlight the alpha (the core thesis, the competitive insight). The reader earns the alpha by reading. Use sparingly (see `apps/blog/content/blog/en/inception.mdx` for reference).
 - Use horizontal rules (`---`) between major sections.
 - Use "I" freely. Opinions are sharp. Deep dives are patient. Tutorials are efficient. Reflections are loose.
 - Target reader: an engineer who cares about "why" as much as "how."

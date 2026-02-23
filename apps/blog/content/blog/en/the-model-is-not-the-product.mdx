@@ -85,32 +85,31 @@ every company that touches us. That's not something any of them ships.
 
 ## The comprehension loop
 
-<mark>The LLM is the engine. We're building the car.</mark>
+<mark>The LLM is the engine. We're building the system.</mark>
 
 What makes Duolingo work isn't vocabulary lists. It's the system around the
 vocabulary: spaced repetition, forced recall, immediate feedback, adaptive
 difficulty, streaks that make quitting feel costly. The pedagogy is the
 product.
 
-We're doing the same thing for enterprise knowledge. The learning primitives
-are real: Socratic dialogue that probes the gaps in your model. Feynman tests
-that force you to explain it simply — and reveal when you can't. Roleplay that
-puts you in the scenario before it happens for real. Spaced reinforcement so
-the thing you learned in onboarding is still there six months later.
+We're doing the same for enterprise knowledge. Socratic dialogue that probes
+gaps. Feynman tests that force you to explain it simply — and reveal when you
+can't. Roleplay that puts you in the scenario before it happens for real.
+Spaced reinforcement so the thing you learned in onboarding is still there six
+months later.
 
-Any major model can power those interactions. None of them can close the loop — connect the
-comprehension back to the workflow, correlate it with error rates in your CRM,
-flag when re-training is needed because something changed upstream. That loop
-is infrastructure. We're building it.
+Any major model can power those interactions.
 
-The generation pipeline runs five specialized agents. Compass analyzes
-documents and produces a structured research brief. Quill writes narration —
-60 to 90 words per scene, aligned to the organization's voice. Prism assigns
-visual layouts. Harmony checks cross-chapter consistency. Sentinel — the
-quality gate — runs deterministic schema validation followed by an LLM audit
-before anything reaches a learner. Each agent has a typed input contract and
-a Zod-validated output. If the model produces output that doesn't conform, it
-fails at the boundary.
+<mark>None of them can close the loop.</mark>
+
+Connect comprehension back to the workflow. Correlate it with error rates in
+your CRM. Flag when re-training is needed because something changed upstream.
+That loop — from knowledge, to comprehension, to performance, back to
+knowledge — is infrastructure. It compounds with every company we touch, every
+document ingested, every gap found and filled.
+
+The generation pipeline runs five specialized agents with typed contracts and
+validated outputs. But the agents are interchangeable. The loop is not.
 
 ---
 
@@ -133,9 +132,8 @@ obsessive depth.
   work.
 </mark>
 
-And even if they tried — they'd arrive years behind on the integrations, the
-pedagogical primitives, and the data on what actually produces competence in
-real workplaces. That data compounds with every company we touch. It doesn't
+The data on what actually produces competence in real workplaces.
+That data compounds with every company we touch. It doesn't
 exist anywhere else.
 
 ---
@@ -144,33 +142,24 @@ exist anywhere else.
 
 Not a chatbot. Not a video player. Not a better PowerPoint generator.
 
-A system that ingests a company's raw knowledge — PDFs, Notion pages, product
-catalogs, SOPs, anything — and converts it into a living knowledge graph. From
-that graph, it generates adaptive learning: video, dialogue, roleplay, Feynman
-tests. It verifies comprehension, not completion. It updates automatically
-when the source changes. It embeds into the tools people already use, so
-learning comes to the employee instead of the other way around.
-
-The output isn't a blob of content. It's a typed structure: `Project →
-Chapter → Scene → Content → NarrationAlignment`. That schema drives both
-generation and playback. The same data the agents produce is what the player
-renders — word boundaries mapped to audio timestamps, layouts resolved at
-generation time, not at render time. No translation layer.
-
-The goal: no one on your team should ever wonder whether they know what they
-need to know. The system ensures it.
+A system that turns a company's raw knowledge into something that actually
+teaches. It ingests what you have — documents, procedures, institutional
+memory scattered across tools — and converts it into adaptive learning. It
+verifies comprehension, not completion. It updates when the source changes. It
+meets employees where they already work.
 
 <mark>
-  Duolingo didn't build a better dictionary. They built the most effective
-  language learning system in history by going obsessively deep on the pedagogy.
+  The goal: no one on your team should ever wonder whether they know what they
+  need to know.
 </mark>
 
-We're doing that for enterprise. Same model, different domain.
+We're doing that for enterprise. Same depth, different domain. You'll see it
+soon.
 
 ---
 
-The big labs won't replace us for the same reason Google didn't replace Salesforce.
+The big labs won't replace us.
 The model is not the product. The system built around it is. And systems take
-years to build, integrate, and earn trust.
+time to build, integrate, and earn trust.
 
 We're building the system.

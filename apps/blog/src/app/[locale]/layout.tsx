@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
@@ -37,6 +38,7 @@ export default async function RootLayout(props: {
         <NextIntlClientProvider messages={messages}>
           <main className="max-w-160 px-6 py-8">{props.children}</main>
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );

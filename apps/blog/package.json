@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@andoni/ui": "workspace:*",
+    "@vercel/analytics": "^1.6.1",
     "next": "catalog:",
     "next-intl": "^4.8.2",
     "react": "catalog:",

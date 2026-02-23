@@ -75,18 +75,11 @@ checkbox.
 <mark>The hard part is not the reasoning. It's the context.</mark>
 
 We're building the brain that holds that context. Not as static content — as a
-living knowledge graph. It updates when your docs update. It flags
-inconsistencies: "this SOP says 45 days, this other document says 30." It
+living knowledge graph. It updates when your docs update. It
 connects knowledge to the people who need it, at the moment they need it.
 
 A language model reasons over context. We're building the context layer for
 every company that touches us. That's not something any of them ships.
-
-In practice: documents get chunked, embedded at 4096 dimensions, and stored
-in Postgres via pgvector. When the system reasons over your company's
-knowledge, it's running semantic search over that table — not hallucinating
-from pre-training. The inconsistency detection is real — it runs at ingestion
-time, not as a post-hoc check.
 
 ---
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getLocale, getTranslations } from "next-intl/server";
+import { SpecialTitle } from "~/components/special-text";
 import { getPostsByLocale } from "~/lib/blog";
 import { localePath } from "~/lib/constants";
 import { routing } from "~/lib/i18n/routing";
@@ -43,7 +44,9 @@ export default async function HomePage({ searchParams }: HomePageProps) {
     <>
       <div className="mb-4 pb-4 flex items-end justify-between border-b border-border">
         <div>
-          <h1 className="text-base font-medium">thoughts</h1>
+          <h1 className="text-base font-medium">
+            <SpecialTitle>thoughts</SpecialTitle>
+          </h1>
           <p className="text-xs text-fg-muted">by andoni</p>
         </div>
         <div className="flex items-center gap-3">

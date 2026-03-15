@@ -5,6 +5,7 @@ import { getTranslations } from "next-intl/server";
 import * as runtime from "react/jsx-runtime";
 import { mdxComponents } from "~/components/mdx";
 import { SoulCard } from "~/components/soul-card";
+import { SpecialTitle } from "~/components/special-text";
 import { TableOfContents } from "~/components/toc";
 import {
   getPostAuthors,
@@ -115,7 +116,7 @@ export default async function PostPage({ params }: PostPageProps) {
 
       <header className="mb-10">
         <h1 className="mb-3 text-base font-medium leading-snug">
-          {post.title}
+          <SpecialTitle>{post.title}</SpecialTitle>
         </h1>
         <p className="mb-4 text-sm text-fg-muted leading-relaxed">
           {post.description}

@@ -128,6 +128,12 @@
   },
   "overrides": [
     {
+      "includes": ["**/content/**/*.mdx"],
+      "formatter": {
+        "enabled": false
+      }
+    },
+    {
       "includes": ["**/env.ts"],
       "linter": {
         "rules": {

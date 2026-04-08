@@ -3,8 +3,12 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "types": "./index.d.ts",
   "exports": {
-    ".": "./theme.css"
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./theme.css"
+    }
   },
   "license": "MIT",
   "scripts": {

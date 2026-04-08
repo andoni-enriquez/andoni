@@ -13,9 +13,9 @@
   "dependencies": {
     "@andoni/ui": "workspace:*",
     "@vercel/analytics": "^2.0.1",
-    "motion": "^12.36.0",
+    "motion": "^12.38.0",
     "next": "catalog:",
-    "next-intl": "^4.8.3",
+    "next-intl": "^4.9.0",
     "react": "catalog:",
     "react-dom": "catalog:",
     "rehype-autolink-headings": "^7.1.0",

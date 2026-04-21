@@ -1,7 +1,7 @@
 import { DEFAULT_LOCALE } from "~/lib/i18n/routing";
 
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://andonienri.com";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.andonienri.com";
 export const SITE_NAME = "andoni";
 
 /** Build a locale-prefixed path respecting localePrefix: "as-needed". */

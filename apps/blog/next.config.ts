@@ -38,6 +38,20 @@ class VeliteWebpackPlugin {
 }
 
 const config: NextConfig = {
+  async headers() {
+    return [
+      {
+        source: "/",
+        headers: [
+          {
+            key: "Link",
+            value:
+              '</llms.txt>; rel="service-doc"; type="text/plain", </sitemap.xml>; rel="sitemap"; type="application/xml"',
+          },
+        ],
+      },
+    ];
+  },
   webpack: (
     config: { plugins: unknown[] },
     _context: WebpackConfigContext,
